@@ -1,17 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-dark bg-primary justify-content-between flex-nowrap flex-row">
+      <div class="container">
+        <a class="navbar-brand float-left">MEVN Stack Example</a>
+
+        <div class="d-flex float-right">
+          <router-link class="btn btn-primary mx-1" to="/">Добавить студента</router-link>
+          <router-link class="btn btn-primary mx-1" to="/view">Список студентов</router-link>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Router view -->
+    <div class="container mt-5">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
